@@ -1,0 +1,8 @@
+.sfondo{
+    /* creiamo un gradiente direzionale dall'alto verso il basso con un cambio di tonalità diviso in due fasce '0-15%' a '15-100%' */
+    background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
+}
+
+.webapp{
+    height: 100vh;
+}
