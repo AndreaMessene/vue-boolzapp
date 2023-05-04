@@ -20,7 +20,7 @@
             <div id="chat-sx">
                 <div class="chat-header">
                     <div class="avatar-header">
-                        <img src="./assets/jpg/avatar_1.jpg" alt="">
+                        <img src="./img/avatar_1.jpg" alt="">
                         <span> Nome </span>
                     </div>
                     <div class="icons-header">
@@ -46,6 +46,11 @@
                 </div>
 
                 <div id="chat-contacts">
+                    <div v-for="(element,index) in contacts" :key="index">
+                        <img :src="element.avatar" alt="element.name">
+                        <span>{{ element.name }}</span>
+
+                    </div>
 
                 </div>
 
