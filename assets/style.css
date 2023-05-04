@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+                    /******* background ******/
 .sfondo{
     /* creiamo un gradiente direzionale dall'alto verso il basso con un cambio di tonalità diviso in due fasce '0-15%' a '15-100%' */
     background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
@@ -15,6 +16,7 @@
     align-items: center;
     justify-content: center;
 }
+                    /**************  *****************/
 
 #chat{
     width: 80%;
@@ -25,7 +27,7 @@
 
 #chat-sx, #chat-dx{
     border: 2px solid rgb(180, 178, 178);
-    height: 100;
+    /* height: 100; */
 }
 
 #chat-sx{
@@ -36,7 +38,8 @@
     width: 70%;
 }
 
-.chat-header{
+                        /********* avatr utente  *********/
+.chat-header,.chat-header-dx{
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -45,14 +48,13 @@
     background-color: #EAEAEA;
 }
 
-
-.chat-header .avatar-header img{
+.chat-header .avatar-header img, .chat-header-dx .avatar-dx img{
     border-radius: 50%;
     max-width: 50px;
     margin-right: 10px;
 }
 
-.icons-header i{
+.icons-header i, .icons-dx i{
     margin: 0 15px;
     font-size: 20px;
     color: #B1B1B1;
@@ -61,7 +63,7 @@
 .icons-header i:last-child{
     margin-right: 0;
 }
-
+                            /**************  ******************/
 #chat-notifiche{
     background-color: #8EDAFC;
     display: flex;
@@ -78,6 +80,7 @@
     margin-right: 10px;
 }
 
+                        /********** barra di ricerca  ***********/
 #chat-search div{
     padding: 10px;
 }
@@ -94,6 +97,10 @@
     width: 95%;
     height: 40px;
 }
+
+                        /****************  *******************/
+
+                        /********** elenco contatti ************/
 
 #chat-contacts div img{
     max-width: 50px;
@@ -114,3 +121,56 @@
 
 }
 
+                        /******************* *****************/
+                    /****** chat dx  */
+.chat-header-dx{
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#chat-body{
+    height: calc(100% - 70px - 70px);
+    background-image: url(../img/mine.jpg);
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-message{
+    height: 70px;
+}
+
+#chat-body{
+    padding: 10px;
+}
+
+.sent{
+    background-color: #d8f88f;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.recevied{
+    background-color: white;
+    align-self: flex-start;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sent, .recevied{
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+                        /*barra creazione e invio messaggi */
+
+#chat-message{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#chat-message input{
+    width: 70%;
+}
