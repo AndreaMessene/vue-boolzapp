@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 .sfondo{
     /* creiamo un gradiente direzionale dall'alto verso il basso con un cambio di tonalità diviso in due fasce '0-15%' a '15-100%' */
     background-image: linear-gradient(to bottom, #009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
@@ -5,4 +11,87 @@
 
 .webapp{
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#chat{
+    width: 80%;
+    height: 95%;
+    background-color: whitesmoke;
+    display: flex;
+}
+
+#chat-sx, #chat-dx{
+    border: 2px solid rgb(180, 178, 178);
+    height: 100;
+}
+
+#chat-sx{
+    width: 30%;
+    
+} 
+#chat-dx{
+    width: 70%;
+}
+
+.chat-header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #EAEAEA;
+}
+
+
+.chat-header .avatar-header img{
+    border-radius: 50%;
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.icons-header i{
+    margin: 0 15px;
+    font-size: 20px;
+    color: #B1B1B1;
+}
+
+.icons-header i:last-child{
+    margin-right: 0;
+}
+
+#chat-notifiche{
+    background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#chat-notifiche i{
+    font-size: 16px;
+    padding: 15px;
+    background-color: #F2FBFF;
+    border-radius: 50px;
+    color: #8EDAFC;
+    margin-right: 10px;
+}
+
+#chat-search div{
+    padding: 10px;
+}
+
+#chat-search div i{
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+
+}
+
+#chat-search div input {
+    padding-left: 35px;
+    width: 95%;
+    height: 40px;
+}
+
