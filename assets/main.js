@@ -3,10 +3,6 @@ const { createApp } = Vue
 createApp({
     data() {
     return {
-
-
-
-
         contacts: [
             {
                 name: 'Michele',
@@ -169,14 +165,11 @@ createApp({
                     }
                 ],
             }
-        ]
+        ],
 
+        recuperoChatDinamico: 0,
 
-
-
-
-
-
+        
     }
     },
 
@@ -188,6 +181,10 @@ createApp({
 
     methods: {
 
+        recuperaChat(i){
+            console.log(`indice elemento cliccato: ${i} `)
+            this.recuperoChatDinamico = (i);
+        }
 
 
     }
