@@ -168,6 +168,7 @@ createApp({
         ],
 
         recuperoChatDinamico: 0,
+        testoMessaggio: ''
 
         
     }
@@ -184,7 +185,31 @@ createApp({
         recuperaChat(i){
             console.log(`indice elemento cliccato: ${i} `)
             this.recuperoChatDinamico = (i);
+        },
+
+        //creazione oggetto per invio messaggio 
+        inviaMessaggio(){
+            this.contacts[ this.recuperoChatDinamico ].messages.push({
+                date: '05/01/2023 15:30:55',
+                message: this.testoMessaggio,
+                status: 'sent'
+            })
+
+            this.testoMessaggio = ''
+
+            //risposta automatizzata
+            setTimeout( () =>{
+                this.contacts[ this.recuperoChatDinamico ].messages.push({
+                    date: '05/01/2023 16:00:45',
+                    message: 'messaggio ricevuto!',
+                    status: 'recevied'
+                })
+            },2000 )
+
+
         }
+
+
 
 
     }

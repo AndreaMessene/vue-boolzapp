@@ -88,7 +88,10 @@
                 <div id="chat-message">
                     <i class="far fa-smile"></i>
 
-                    <input type="text" placeholder="Inserisci testo">
+                    <input type="text" 
+                        placeholder="Inserisci testo"
+                        v-model="testoMessaggio"
+                        @keyUp.enter="inviaMessaggio" >
 
                     <i class="fa fa-microphone"></i>
     
