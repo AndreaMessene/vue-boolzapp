@@ -37,16 +37,17 @@
                         <p class="mb-0">Attiva notifiche desktop</p>
                     </div>
                 </div>
-
+                <!-- ricerca contatto su base nominativo -->
                 <div id="chat-search">
                     <div class="position-relative">
-                        <input type="text" placeholder="trova contatto">
+                        <input type="text" placeholder="trova contatto" v-model="ricercaContatto" @keyUp="ricercaNominativo">
                         <i class="fas fa-search position-absolute"></i>
                     </div>
                 </div>
 
+                
                 <div id="chat-contacts">
-                    <div v-for="(element,index) in contacts" :key="index" @click="recuperaChat(index)">
+                    <div v-for="(element,index) in contacts" :key="index" @click="recuperaChat(index)" :class=" element.visible ? 'd-flex' : 'd-none'">
                         <img :src="element.avatar" alt="element.name">
                         <span>{{ element.name }}</span>
 
@@ -75,6 +76,7 @@
                     <div :class=" element.status == 'sent' ? 'sent' : 'recevied' " 
                         v-for="(element, index) in contacts[recuperoChatDinamico].messages">
                         <p> {{element.message}} </p>
+                        <span> {{estrazioneData(index)}} </span>
                     </div>
                     <!-- <div class="sent">
                         <p>Ricordati di stendere i panni</p>

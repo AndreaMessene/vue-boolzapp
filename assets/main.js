@@ -168,7 +168,8 @@ createApp({
         ],
 
         recuperoChatDinamico: 0,
-        testoMessaggio: ''
+        testoMessaggio: '',
+        ricercaContatto: '',
 
         
     }
@@ -205,12 +206,24 @@ createApp({
                     status: 'recevied'
                 })
             },2000 )
+        },
 
+        estrazioneData(i){
+            const arreyData = this.contacts[ this.recuperoChatDinamico ].messages[i].date.split(' ')
+            return arreyData[1]
+        },
 
+        //ricerca nome in contatti gia presenti 
+        ricercaNominativo(){
+            this.contacts.forEach( (element) =>{
+                if( element.name.includes(this.ricercaContatto)){
+                    element.visible = true
+
+                }else{
+                    element.visible = false
+                }
+            })
         }
-
-
-
 
     }
 
